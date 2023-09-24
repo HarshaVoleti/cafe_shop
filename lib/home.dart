@@ -21,7 +21,6 @@ class _HomePageState extends State<HomePage> {
         extendBodyBehindAppBar: true,
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(140.0),
-
           child: CustomAppBar(),
         ),
         body: Custombody(),
@@ -189,9 +188,10 @@ class Custombody extends StatelessWidget {
                                       children: [
                                         Image.asset(
                                           coffes2[index]["img"],
+                                          // color: Colors.amber,
                                         ),
                                         Positioned(
-                                          top: 100,
+                                          bottom: 0,
                                           right: 30,
                                           child: Container(
                                             padding: EdgeInsets.symmetric(
@@ -218,6 +218,9 @@ class Custombody extends StatelessWidget {
                             ),
                           ),
                         ),
+                      ),
+                      SizedBox(
+                        height: 0,
                       ),
                     ],
                   ),
@@ -503,7 +506,6 @@ class BottomCustomBar extends StatelessWidget {
                     width: 45,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      // color: Color.fromRGBO(94, 94, 94, 1),
                     ),
                     child: Container(
                       child: Icon(
